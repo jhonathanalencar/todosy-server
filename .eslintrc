@@ -13,6 +13,8 @@
   },
   "rules": {
     "prettier/prettier": "error",
-    "camelcase": "off"
+    "camelcase": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-floating-promises": "off"
   }
 }
