@@ -1,8 +1,10 @@
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
+import 'express-async-errors';
+import 'dotenv/config';
 
-import { connectDB } from './database/connect';
+import { connectDB } from './configs/dbConnect';
 
 const app = express();
 
