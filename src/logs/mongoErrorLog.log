@@ -1,0 +1,2 @@
+2022/12/28	18:02:05	03d104ff-e475-4851-a35b-747708839039	MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+2022/12/28	18:02:29	f8341c84-34bc-4b47-ab1b-116316375038	MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
