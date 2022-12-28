@@ -12,7 +12,7 @@
     "lint:fix": "eslint . --fix --max-warnings=0"
   },
   "lint-staged": {
-    "src/**/*": [
+    "src/**/*.ts": [
       "npm run lint:fix"
     ]
   },
