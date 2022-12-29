@@ -8,6 +8,8 @@ import { connectDB } from './configs/dbConnect';
 import { logEvents } from './utils/logEvents';
 
 import { logger } from './middlewares/logger';
+import { userRoutes } from './routes/user.routes';
+import { errorHandler } from './middlewares/errorHandler';
 
 const app = express();
 
@@ -17,6 +19,10 @@ app.use(cors());
 app.use(express.json());
 
 app.use(logger);
+
+app.use(userRoutes);
+
+app.use(errorHandler);
 
 const PORT = process.env.PORT ?? 3333;
 
