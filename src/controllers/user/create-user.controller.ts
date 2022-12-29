@@ -1,5 +1,7 @@
 import { Request, Response } from 'express';
 import { z } from 'zod';
+import bcrypt from 'bcrypt';
+
 import { CreateUserService } from '../../services/user/create-user.service';
 
 const createUserBody = z
@@ -34,13 +36,15 @@ class CreateUserController {
 
     const service = new CreateUserService();
 
+    const hashedPassword = bcrypt.hashSync(password, 10);
+
     const { user } = await service.execute({
       name,
       email,
-      password,
+      password: hashedPassword,
     });
 
-    return response.status(201).json(user);
+    return response.status(201).json({ message: `User ${user.name} created` });
   }
 }
 
