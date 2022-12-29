@@ -8,4 +8,4 @@
 2022/12/29	17:28:22	2f23fe5f-d73f-44f4-96f8-4df5c8951cf6	invalid_type[passwordConfirmation]: Password confirmation required	POST	/users	undefined
 2022/12/29	17:28:45	f8e7c224-6871-434c-b7a8-72b2c78bf6b5	custom[passwordConfirmation]: Passwords do not match	POST	/users	undefined
 2022/12/29	17:31:51	2e6d0c8c-0656-44a5-82a3-a399b985c49b	Error: User with that email already exists	POST	/users	undefined
-2022/12/29	17:33:04	df40151d-456a-4f7d-a7a4-933bfc5187fb	TypeError: Cannot destructure property 'user' of '(intermediate value)' as it is undefined.	POST	/users	undefined
+2022/12/29	17:33:04	df40151d-456a-4f7d-a7a4-933bfc5187fb	TypeError: Cannot destructure property 'user' of '(intermediate value)' as it is undefined.	POST	/users	undefined2022/12/29	18:04:27	fb416290-0aeb-48ce-86db-2ae99c082632	Error: User with that email already exists	POST	/users	undefined
