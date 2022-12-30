@@ -1,6 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 import { ZodError } from 'zod';
-import { logEvents } from '../utils/logEvents';
+
+import { logEvents } from '@/utils/logEvents';
 
 interface CustomError extends Error {
   statusCode?: number;
@@ -14,7 +15,7 @@ function errorHandler(
 ) {
   let customError = {
     name: error.name ?? 'Error',
-    statusCode: error?.statusCode ?? 500,
+    statusCode: error.statusCode ?? 500,
     message: error.message ?? 'Something went wrong try again later',
   };
 

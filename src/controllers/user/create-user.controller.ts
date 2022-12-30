@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import { z } from 'zod';
 import bcrypt from 'bcrypt';
 
-import { CreateUserService } from '../../services/user/create-user.service';
+import { CreateUserService } from '@/services/user/create-user.service';
 
 const createUserBody = z
   .object({

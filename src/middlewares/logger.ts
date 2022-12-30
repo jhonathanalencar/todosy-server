@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 
-import { logEvents } from '../utils/logEvents';
+import { logEvents } from '@/utils/logEvents';
 
 function logger(request: Request, response: Response, next: NextFunction) {
   logEvents(
