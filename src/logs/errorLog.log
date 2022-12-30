@@ -10,3 +10,4 @@
 2022/12/29	17:31:51	2e6d0c8c-0656-44a5-82a3-a399b985c49b	Error: User with that email already exists	POST	/users	undefined
 2022/12/29	17:33:04	df40151d-456a-4f7d-a7a4-933bfc5187fb	TypeError: Cannot destructure property 'user' of '(intermediate value)' as it is undefined.	POST	/users	undefined2022/12/29	18:04:27	fb416290-0aeb-48ce-86db-2ae99c082632	Error: User with that email already exists	POST	/users	undefined
 2022/12/30	15:38:51	5285a7c4-409a-47f4-a695-f6ca7f9596db	Error: ENOENT: no such file or directory, stat 'C:\Users\LAK\yui\todosy\server\src\views\400.html'	GET	/asas	undefined
+2022/12/30	16:36:25	ca36dbb5-e9d7-4fb7-ba4b-1c90f9c4fd90	Error: User with that email already exists	POST	/users	undefined
