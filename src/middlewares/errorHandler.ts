@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 import { ZodError } from 'zod';
 
-import { logEvents } from '@/utils/logEvents';
+import { logEvents } from '@/utils';
 
 interface CustomError extends Error {
   statusCode?: number;

@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { z } from 'zod';
 
-import { CreateUserService } from '@/services/user/create-user.service';
+import { CreateUserService } from '@/services/user';
 
 const createUserBody = z
   .object({
@@ -41,7 +41,13 @@ class CreateUserController {
       password,
     });
 
-    return response.status(201).json({ message: `User ${user.name} created` });
+    const {
+      password: userPassword,
+      comparePassword,
+      ...userWithoutPassword
+    } = Object.assign({}, user.toObject());
+
+    return response.status(201).json(userWithoutPassword);
   }
 }
 

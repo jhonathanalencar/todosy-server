@@ -17,16 +17,16 @@ const userSchema = new mongoose.Schema<IUser>(
   {
     name: {
       type: String,
-      require: [true, 'Name required'],
+      required: [true, 'Name required'],
     },
     email: {
       type: String,
-      require: [true, 'Email required'],
+      required: [true, 'Email required'],
       unique: true,
     },
     password: {
       type: String,
-      require: [true, 'Password required'],
+      required: [true, 'Password required'],
     },
     plan: {
       type: String,

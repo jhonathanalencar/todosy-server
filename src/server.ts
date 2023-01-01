@@ -6,11 +6,10 @@ import mongoose from 'mongoose';
 import 'express-async-errors';
 
 import { connectDB } from './configs/dbConnect';
-import { logEvents } from './utils/logEvents';
+import { logEvents } from './utils';
 
-import { logger } from './middlewares/logger';
-import { userRoutes } from './routes/user.routes';
-import { errorHandler } from './middlewares/errorHandler';
+import { logger, errorHandler } from './middlewares';
+import { userRoutes } from './routes';
 
 const app = express();
 
