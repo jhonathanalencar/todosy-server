@@ -9,10 +9,10 @@ import {
 
 const userRoutes = express.Router();
 
-userRoutes.post('/users', new CreateUserController().handle);
+userRoutes.post('/', new CreateUserController().handle);
 
-userRoutes.put('/users/:id', new UpdateUserController().handle);
-userRoutes.delete('/users/:id', new DeleteUserController().handle);
-userRoutes.patch('/users/:id', new UpgradeUserPlanController().handle);
+userRoutes.put('/:id', new UpdateUserController().handle);
+userRoutes.delete('/:id', new DeleteUserController().handle);
+userRoutes.patch('/:id', new UpgradeUserPlanController().handle);
 
 export { userRoutes };

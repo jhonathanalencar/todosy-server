@@ -9,7 +9,7 @@ import { connectDB } from './configs/dbConnect';
 import { logEvents } from './utils';
 
 import { logger, errorHandler } from './middlewares';
-import { userRoutes } from './routes';
+import { router } from './routes';
 
 const app = express();
 
@@ -26,7 +26,7 @@ app.get('/', (request, response) => {
   response.sendFile(path.resolve(__dirname, 'views', 'index.html'));
 });
 
-app.use(userRoutes);
+app.use(router);
 
 app.all('*', (request, response) => {
   response.status(404);
