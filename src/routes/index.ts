@@ -6,6 +6,6 @@ import { listRoutes } from './list.routes';
 const router = Router();
 
 router.use('/users', userRoutes);
-router.use('/list', listRoutes);
+router.use('/lists', listRoutes);
 
 export { router };
