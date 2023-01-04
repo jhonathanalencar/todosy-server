@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import { ZodError } from 'zod';
+import { mongo } from 'mongoose';
 
 import { logEvents } from '@/utils';
 
@@ -27,6 +28,16 @@ function errorHandler(
       message: error.errors[0].message,
       statusCode: 400,
     };
+  }
+
+  if (error instanceof mongo.MongoError) {
+    if (error.code === 11000) {
+      customError = {
+        name: error.name,
+        message: error.message,
+        statusCode: 409,
+      };
+    }
   }
 
   logEvents(
