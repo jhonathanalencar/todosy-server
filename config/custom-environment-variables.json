@@ -1,3 +1,5 @@
 {
-  "mongoUri": "MONGO_URI"
+  "mongoUri": "MONGO_URI",
+  "accessTokenSecret": "ACCESS_TOKEN_SECRET",
+  "refreshTokenSecret": "REFRESH_TOKEN_SECRET"
 }
