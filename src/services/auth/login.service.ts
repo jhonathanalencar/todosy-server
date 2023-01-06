@@ -2,7 +2,7 @@ import jwt, { Secret } from 'jsonwebtoken';
 import config from 'config';
 
 import { User } from '@/models';
-import { UnauthenticatedError } from '@/errors/unauthenticated';
+import { UnauthenticatedError } from '@/errors';
 
 interface LoginInput {
   email: string;

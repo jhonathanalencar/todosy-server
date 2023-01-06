@@ -4,6 +4,7 @@ import path from 'node:path';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import 'express-async-errors';
+import cookieParser from 'cookie-parser';
 
 import { connectDB } from './configs/dbConnect';
 import { logEvents } from './utils';
@@ -17,6 +18,7 @@ connectDB();
 
 app.use(cors());
 app.use(express.json());
+app.use(cookieParser());
 
 app.use(logger);
 

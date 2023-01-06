@@ -1,5 +1,7 @@
 import { Router } from 'express';
 
+import { verifyJWT } from '@/middlewares';
+
 import {
   CreateTodoController,
   DeleteTodoController,
@@ -9,6 +11,8 @@ import {
 } from '@/controllers/todo';
 
 const todoRoutes = Router();
+
+todoRoutes.use(verifyJWT);
 
 todoRoutes.post('/', new CreateTodoController().handle);
 todoRoutes.get('/', new GetTodosByListController().handle);

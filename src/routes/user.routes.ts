@@ -6,10 +6,13 @@ import {
   UpdateUserController,
   UpgradeUserPlanController,
 } from '@/controllers/user';
+import { verifyJWT } from '@/middlewares';
 
 const userRoutes = express.Router();
 
 userRoutes.post('/', new CreateUserController().handle);
+
+userRoutes.use(verifyJWT);
 
 userRoutes.put('/:id', new UpdateUserController().handle);
 userRoutes.delete('/:id', new DeleteUserController().handle);

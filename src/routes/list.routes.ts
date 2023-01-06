@@ -1,5 +1,7 @@
 import { Router } from 'express';
 
+import { verifyJWT } from '@/middlewares';
+
 import {
   CreateListController,
   UpdateListController,
@@ -10,6 +12,8 @@ import {
 } from '@/controllers/list';
 
 const listRoutes = Router();
+
+listRoutes.use(verifyJWT);
 
 listRoutes.post('/', new CreateListController().handle);
 listRoutes.put('/', new UpdateListController().handle);
