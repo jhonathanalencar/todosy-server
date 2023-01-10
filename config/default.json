@@ -1,5 +1,6 @@
 {
   "mongoUri": "mongodb://127.0.0.1:27017/todosy_db",
   "accessTokenSecret": "c4546e63d99814e1fc515d9adecec84e356c1b726bfd02490b48b0986767b5d6ac3fa4ecda5ead1c90507e51905bcf51d816cd0549459cc260f3a4fa7cf39c2b",
-  "refreshTokenSecret": "fea7a860af9c02957b05587e25b9eed9368220f438e49634bbe4e89c972ea8dbbbf7c2c1bd771746a81d4320d2c780581c97d8d9aff669e499609751c6dcf423"
+  "refreshTokenSecret": "fea7a860af9c02957b05587e25b9eed9368220f438e49634bbe4e89c972ea8dbbbf7c2c1bd771746a81d4320d2c780581c97d8d9aff669e499609751c6dcf423",
+  "appUrl": "http://localhost:5173"
 }

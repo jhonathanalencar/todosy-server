@@ -7,6 +7,7 @@ import 'express-async-errors';
 import cookieParser from 'cookie-parser';
 
 import { connectDB } from './configs/dbConnect';
+import { corsOptions } from './configs/corsOptions';
 import { logEvents } from './utils';
 
 import { logger, errorHandler } from './middlewares';
@@ -16,7 +17,7 @@ const app = express();
 
 connectDB();
 
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(cookieParser());
 
